@@ -15,6 +15,7 @@ namespace Xadrex
                     }
                 }
                 System.Console.WriteLine();
+                
             }
         }        
     }
