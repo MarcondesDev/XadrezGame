@@ -8,15 +8,23 @@ namespace Xadrex
     {
         static void Main(string[] args)
         {
-            Tabuleiro tab = new Tabuleiro(8, 8);
+            try {
+                PartidaDeXadrez partida = new PartidaDeXadrez();            
+                while(!partida.terminada) {
+                    Console.Clear();
+                    Tela.imprimirTabuleiro(partida.tab);
+                    System.Console.WriteLine();
+                    System.Console.Write("Origem: ");
+                    Posicao origem = Tela.lerPosicaoXadrez().toPosicao();
+                    System.Console.Write("Destino: ");
+                    Posicao destino = Tela.lerPosicaoXadrez().toPosicao();
 
-            tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(0,0));
-            tab.colocarPeca(new Torre(tab, Cor.Preta), new Posicao(1,3));
-            tab.colocarPeca(new Rei(tab, Cor.Preta), new Posicao(2,4));
+                    partida.executarMovimento(origem, destino);
+                }
+            }catch(TabuleiroException e) {
+                System.Console.WriteLine(e.Message);
+            }
             
-            tab.colocarPeca(new Torre(tab, Cor.Branca), new Posicao(3,5));
-            
-            Tela.imprimirTabuleiro(tab);
             
             Console.ReadLine();
         }
