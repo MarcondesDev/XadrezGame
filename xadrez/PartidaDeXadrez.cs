@@ -38,6 +38,12 @@ namespace xadrez
                 throw new TabuleiroException("Nao ha movimentos possiveis para a peca de origem escolhda!");
             }
         }
+
+        public void validarPosicaoDeDestino(Posicao origem, Posicao destino) {
+            if (tab.peca(origem).podeMoverPara(destino)) {
+                throw new TabuleiroException("Posicao de destino invalida!");
+            }
+        }
         private void mudaJogador() {
             if (jogadorAtual == Cor.Branca) {
                 jogadorAtual = Cor.Preta;
