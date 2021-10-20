@@ -14,6 +14,9 @@ namespace Xadrex
             System.Console.WriteLine();
             System.Console.WriteLine("Turno: " + partida.turno);
             System.Console.WriteLine("Aguardando jogada: " + partida.jogadorAtual);
+            if (partida.xeque) {
+                System.Console.WriteLine("XEQUE!");
+            }
         }
         public static void imprimirPecasCapturadas(PartidaDeXadrez partida) {
             System.Console.WriteLine("Pecas capoturadas:");
