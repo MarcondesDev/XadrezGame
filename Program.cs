@@ -37,6 +37,8 @@ namespace Xadrex
                         Console.ReadLine();
                     }
                 }
+                Console.Clear();
+                System.Console.WriteLine(partida);
             }catch(TabuleiroException e) {
                 System.Console.WriteLine(e.Message);
             }
