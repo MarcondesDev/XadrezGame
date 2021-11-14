@@ -38,9 +38,9 @@ namespace Xadrex
         public static void imprimirConjunto(HashSet<Peca> conjunto) {
             System.Console.Write("[");
             foreach(Peca x in conjunto) {
-                System.Console.WriteLine(x + " ");
+                System.Console.Write(x + " ");
             }
-            System.Console.WriteLine("]");
+            System.Console.Write("]");
         }
         
         
