@@ -24,5 +24,5 @@ The all available and used Languages tools
 
 
 ###### Teacher: Nelio Alves
-##### C# COMPLETO Programação Orientada a Objetos + Projetos
+##### Curse: C# COMPLETO Programação Orientada a Objetos + Projetos
 
